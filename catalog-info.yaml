@@ -1,23 +1,16 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: backstage
-  description: |
-    Backstage is an open-source developer portal that puts the developer experience first.
-  links:
-    - title: Website
-      url: http://backstage.io
-    - title: Documentation
-      url: https://backstage.io/docs
-    - title: Storybook
-      url: https://backstage.io/storybook
-    - title: Discord Chat
-      url: https://discord.com/invite/EBHEGzX
+  name: rewards-developer-portal
+  description: A portal to everything a Rewards developer ever need.
   annotations:
-    github.com/project-slug: backstage/backstage
+    backstage.io/view-url: https://github.com/rewards-devops/rewards-developer-portal
+    github.com/project-slug: rr-peter-chen/backstage
     backstage.io/techdocs-ref: dir:.
-    lighthouse.com/website-url: https://backstage.io
+    'backstage.io/kubernetes-id': dev-portal
+    'backstage.io/kubernetes-namespace': dev-portal-qa
+    'backstage.io/kubernetes-label-selector': 'app=backstage, component=backend'
 spec:
-  type: library
-  owner: CNCF
+  type: service
+  owner: rewards-devops/platform-fe
   lifecycle: experimental
